@@ -5,10 +5,7 @@ public class Address {
 	private String state;
 	private String zipCode;
 	
-	
-	public Address() {
-	}
-	
+		
 	public Address(String street, String city, String state, String zipCode) {
 		this.street = street;
 		this.city = city;
@@ -16,7 +13,40 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 	
-	public String getAddressString() {
+	public String getStreet() {
+		return this.street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return this.city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return this.state;
+	}
+
+	public void setState(String state) {
+		state = state.toUpperCase();
+		this.state = state;
+	}
+
+	public String getZip() {
+		return this.zipCode;
+	}
+
+	public void setZip(String zip) {
+		this.zipCode = zip;
+	}
+
+	public String toString() {
 		return street + ", " + city + ", " + state + ", " + zipCode;
 	}
 }
